@@ -81,3 +81,26 @@ left: 64%;
 position: absolute;
 left: 80%;
 }
+#content{
+text-align: center;
+width: 90%;
+position: relative;
+top: 100px;
+left: 5%;
+background-color: white;
+border-radius: 25px;
+-webkit-border-radius: 25px;
+-moz-border-radius: 25px;
+}
+#contentText {
+padding: 0px 40px 40px 40px;
+}
+#contentTitle {
+background-color: #9fc3c7;
+border-top-right-radius: 1em 3em;
+border-top-left-radius: 25px;
+-webkit-border-top-left-radius: 25px;
+-moz-border-top-left-radius: 25px;
+-webkit-border-top-right-radius: 25px;
+-moz-border-top-right-radius: 25px;
+}
