@@ -1,0 +1,17 @@
+Package: com.broganminer.anchor
+Version: 1.0.0-B.1-2
+Architecture: iphoneos-arm
+Maintainer: Brogan Miner <broganminer22@gmail.com>
+Installed-Size: 436
+Depends: firmware (>= 8.0),mobilesubstrate,applist,crash-reporter
+Filename: ./packages/com.broganminer.anchor_1.0.0-B.1-2_iphoneos-arm.deb
+Size: 126012
+MD5sum: d3ac63ebf7765f17233647e5e6b46bff
+SHA1: c4529ec4735436d61ab74e407bab1f637af5bca0
+SHA256: d80ff5a746a662612a92e897957eafedbffb703a475553e322a84674186900c4
+Section: Tweaks
+Homepage: http://broha22.github.io
+Description: Keep your icons where you want them.
+Author: Brogan Miner <broganminer22@gmail.com>
+Depiction: http://broha22.github.io/repo/packages/anchor.html
+Name: Anchor
