@@ -14,29 +14,52 @@
 	position: relative;
 	z-index: 200;
 }
-.container.head{
+.container-fluid.head{
 	position: relative;
 	top: 340px;
 }
-.row.headRow {
+.container-fluid.activity {
+	width: 800px;
+	height: 100%;
+	margin-right: 30px;
+}
+
+.container-fluid.activity td {
+	background-color: #373737;
+	border: solid 2px #424242;
+	width: 25px;
+}
+.day {
+	color: white;
+	padding-left: 8px;
+	font-size: 10px;
+}
+.container-fluid.activity table {
+	height: 180px;
+	width: 100%;
 }
 .col.headItem {
 	background-color: #D1957F;
 	height: 500px;
 	margin: 20px;
+	margin-left: 80px;
+	margin-right: 40px;
 	border-radius: 10px;
 	padding:0px;
 	overflow: hidden;
 }
-.container.headItemTitle {
-	background-color: #C97252;
+.headItemTitle {
 	color: #FFFFFF;
 	height: 80px;
 	width: 100%;
-	text-align: center;
 	font-size: 24px;
 	padding: 0px;
 	line-height: 80px;
+}
+.container.headItemTitle {
+	background-color: #C97252;
+	text-align: center;
+
 }
 
 .container.headItemTitle img {
@@ -104,6 +127,31 @@
 	border: none;
 	padding: 10px;
 	height: 380px;
+}
+.container.commits {
+	margin-top: 30px;
+}
+
+.commit {
+	background-color: #96969F;
+	margin: 10px;
+	border-radius: 10px;
+}
+.commit h2 {
+	font-size: 16px;
+	line-height: 16px;
+	display: inline-block;
+	margin: 5px;
+	margin-left: 15px;
+}
+.commit p {
+	color: #323232;
+	margin-top: 0px;
+	margin-left: 30px;
+	padding-bottom: 5px;
+	font-size: 12px;
+	line-height: 12px;
+
 }
 
 .container.overlayButton {

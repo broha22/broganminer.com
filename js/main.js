@@ -1,3 +1,68 @@
+function parseData(data) {
+	var calData = {};
+	var q = 0;
+	for (x in data.data) {
+		var s = data.data[x].created_at;
+		if (!calData[s.substring(0,s.indexOf('T'))])
+			calData[s.substring(0,s.indexOf('T'))] = 1;
+		else
+			calData[s.substring(0,s.indexOf('T'))] += 1;
+
+		if (q < 4 && data.data[x].payload.commits) {
+			var title = data.data[x].repo.name;
+			var link = data.data[x].repo.url.replace("api.","");
+			var desc = data.data[x].payload.commits[0].message;
+
+			console.log(title + " " + desc)
+			var elm = document.createElement("div");
+			elm.classList.add("commit");
+			var head = document.createElement("h2");
+			head.innerHTML = title;
+			elm.append(head)
+			var bod = document.createElement("p");
+			bod.innerHTML = desc;
+			elm.append(bod)
+			$(elm).click(function(){
+				window.location.href = link;
+			});
+			$(elm).mouseenter(function(){
+				this.style.backgroundColor = "#FFFFFF";
+			}).mouseleave(function(){
+				this.style.backgroundColor = "#96969F";
+			});
+
+			$(".container.commits")[0].append(elm);
+			q++;
+			console.log(data.data[x])
+		}
+	}
+	console.log(calData);
+	var tempCells = $(".container-fluid.activity td").not(".day");
+	var cells = [];
+	var q = 0;
+	var r = 0;
+	while (((10*r)+q) < tempCells.length) {
+		cells.push(tempCells[(10*r)+q]);
+		if (r == 6) {
+			r = 0;
+			q++;
+		}
+		else {
+			r++;
+		}
+	}
+	var date = new Date();
+	var l = date.getDay();
+	console.log(l);
+	for (var i = cells.length-(7+(7-l)); i >= 0; i--) {
+		cells[i].id = date;
+		if (calData[date.toISOString().substring(0,s.indexOf('T'))]) {
+			var n = calData[date.toISOString().substring(0,s.indexOf('T'))];
+			cells[i].style.backgroundColor = "rgba("+Math.round(254 - 105*(n/5.0)).toString() +","+ Math.round(160 -67*(n/5.0)).toString() +","+ Math.round(119 -49*(n/5.0)).toString() +",1)";
+		}
+		date.setDate(date.getDate()-1);
+	}
+}
 $(document).ready(function(){
 
 	var keys = {37: 1, 38: 1, 39: 1, 40: 1};
@@ -76,7 +141,16 @@ $(document).ready(function(){
 		}
 	}
 
-  	
+	
+
+	function loadGithubData() {
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = "https://api.github.com/users/broha22/events?callback=parseData";
+		document.body.append(script);
+	}
+
+  	loadGithubData();
 	truncateTopics();
 	repositionHero();
 
