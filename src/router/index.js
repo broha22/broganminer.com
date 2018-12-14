@@ -27,6 +27,10 @@ export default new Router({
       path: '/projects/',
       name: 'projects',
       component: projects
+    },
+    {
+      path: '/projects/:cat',
+      component: projects
     }
   ]
 })

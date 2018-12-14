@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-4 border-right">
+      <div class="col-md-4 border-right">
         <div class="row">
           <div class="col h6">
             Education
@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col border-right">
+          <div class="col-md border-right">
             <div class="row">
               <div class="col">
                 <img class="brandImage" src='static/gratons.png' />
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md">
             <div class="row">
               <div class="col">
                 <img class="brandImage" src='static/sus.png' />

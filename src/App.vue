@@ -7,14 +7,15 @@
           Brogan Miner
         </b-navbar-brand>
         <b-navbar-nav>
-          <b-nav-item-dropdown style="">
+          <!-- <b-nav-item-dropdown style="">
           <template slot="button-content">
             <span class="link">Projects</span>
           </template>
-          <b-dropdown-item href="/#/projects">Web Development</b-dropdown-item>
-          <b-dropdown-item href="/#/projects">iOS Development</b-dropdown-item>
-          <b-dropdown-item href="/#/projects">Computer Engineering</b-dropdown-item>
-        </b-nav-item-dropdown>
+          <b-dropdown-item href="/#/projects/web">Web Development</b-dropdown-item>
+          <b-dropdown-item href="/#/projects/ios">iOS Development</b-dropdown-item>
+          <b-dropdown-item href="/#/projects/ce">Computer Engineering</b-dropdown-item>
+        </b-nav-item-dropdown> -->
+          <b-nav-item href="/#/projects"><span class="link">Projects</span></b-nav-item>
           <b-nav-item href="/#/about"><span class="link">About</span></b-nav-item>
         </b-navbar-nav>
       </b-navbar>
