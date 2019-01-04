@@ -1,5 +1,7 @@
 # broha22.github.io
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/broha22/broganminer.com.svg)](https://greenkeeper.io/)
+
 > A Vue.js project
 
 ## Build Setup
