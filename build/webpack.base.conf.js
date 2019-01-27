@@ -1,3 +1,13 @@
+/**
+ * @Author: Brogan Miner <Brogan>
+ * @Date:   2018-08-07T16:06:36-07:00
+ * @Email:  brogan.miner@oregonstate.edu
+ * @Last modified by:   Brogan
+ * @Last modified time: 2018-12-14T16:33:16-08:00
+ */
+
+
+
 'use strict'
 const path = require('path')
 const utils = require('./utils')

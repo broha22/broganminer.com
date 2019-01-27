@@ -1,0 +1,36 @@
+// @Author: Brogan Miner <Brogan>
+// @Date:   2018-12-14T15:59:12-08:00
+// @Email:  brogan.miner@oregonstate.edu
+// @Last modified by:   Brogan
+// @Last modified time: 2018-12-19T20:04:09-08:00
+
+
+// SASS style sheet */
+// Palette color codes */
+// Palette URL: http://paletton.com/#uid=53L0u0kmcBuc6QVhHJ5qJvXuOqM */
+
+$color-primary-0: #6E7F96;	// Main Primary color */
+$color-primary-1: #CAD0D8;
+$color-primary-2: #96A2B2;
+$color-primary-3: #4C617E;
+$color-primary-4: #324968;
+
+$body-bg: $color-primary-4;
+$body-color: $color-primary-2;
+
+$theme-colors: (
+  "primary": $color-primary-2,
+  "secondary": $color-primary-1,
+  "info": $color-primary-3,
+  "danger": #ff4136
+);
+:root {
+  --dark: $color-primary-4,
+}
+:export {
+  primary: $color-primary-2;
+  secondary: $color-primary-1;
+  info: $color-primary-3;
+  dark: $color-primary-4;
+}
+@import '~bootstrap/scss/bootstrap.scss';
