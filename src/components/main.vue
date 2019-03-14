@@ -3,7 +3,7 @@
 @Date:   2018-12-14T15:36:57-08:00
 @Email:  brogan.miner@oregonstate.edu
 @Last modified by:   Brogan
-@Last modified time: 2019-03-13T18:00:01-07:00
+@Last modified time: 2019-03-13T18:17:34-07:00
 -->
 
 <template>
@@ -67,7 +67,7 @@
 <script>
 import bar from '@/components/bar'
 import projectSelector from '@/components/projectselector'
-import projectViewer from '@/components/projectviewer'
+import projectViewer from '@/components/projectViewer'
 export default {
   name: 'home',
   components: {
