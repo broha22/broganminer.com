@@ -1,0 +1,30 @@
+[
+  {
+    "name" : "OSU Energy Dashboard",
+    "images" : [
+      "dashboard0.png",
+      "dashboard1.png",
+      "dashboard2.png"
+    ],
+    "description" : "The OSU Energy Dahsboard is a web application that focuses on providing real-time usage measurements of on campus buildings' utilities. The dashboard consists of a front-end made with Vue.js and a backend hosted on AWS running Node 10.7. This project was presented at the Washington Oregon Higher Education Sustainability Conference of 2019. The dashboard continues to serve the Oregon State University community as a means of tracking and measuring building energy usage.",
+    "links" : [
+      {
+        "text" : "GitHub",
+        "href" : "https://github.com/OSU-Sustainability-Office/energy-dashboard"
+      },
+      {
+        "text" : "Live Link",
+        "href" : "https://dashboard.sustainability.oregonstate.edu"
+      }
+    ]
+  },
+  {
+    "name" : "Discrete DRAM",
+    "images" : [
+      "dram0.jpg",
+      "dram1.png",
+      "dram2.png"
+    ],
+    "description" : "The Discrete DRAM project incorporated the team work of three people. In this project, the goal was to create a dynamic memory array with 40 bits. The control logic for this module was to be implemented on an FPGA. The memory had to be made of discrete components which proved to be an extra challenge."
+  }
+]

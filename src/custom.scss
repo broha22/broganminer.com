@@ -2,22 +2,23 @@
 // @Date:   2018-12-14T15:59:12-08:00
 // @Email:  brogan.miner@oregonstate.edu
 // @Last modified by:   Brogan
-// @Last modified time: 2018-12-19T20:04:09-08:00
+// @Last modified time: 2019-03-13T14:45:46-07:00
 
 
 // SASS style sheet */
 // Palette color codes */
 // Palette URL: http://paletton.com/#uid=53L0u0kmcBuc6QVhHJ5qJvXuOqM */
 
-$color-primary-0: #6E7F96;	// Main Primary color */
-$color-primary-1: #CAD0D8;
-$color-primary-2: #96A2B2;
-$color-primary-3: #4C617E;
-$color-primary-4: #324968;
+$color-primary-0: #ff71ce;	// Main Primary color */
+$color-primary-1: #01cdfe;
+$color-primary-2: #05ffa1;
+$color-primary-3: #b967ff;
+$color-primary-4: #fffb96;
 
 $body-bg: $color-primary-4;
 $body-color: $color-primary-2;
-
+$font-family-base: "Times New Roman", Times, serif !default;
+$headings-font-family: 'Audiowide', cursive;
 $theme-colors: (
   "primary": $color-primary-2,
   "secondary": $color-primary-1,
@@ -34,3 +35,4 @@ $theme-colors: (
   dark: $color-primary-4;
 }
 @import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
