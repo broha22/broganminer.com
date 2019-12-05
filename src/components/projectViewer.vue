@@ -3,13 +3,13 @@
 @Date:   2019-03-13T16:46:17-07:00
 @Email:  brogan.miner@oregonstate.edu
 @Last modified by:   Brogan
-@Last modified time: 2019-03-13T17:57:30-07:00
+@Last modified time: 2019-03-13T21:06:35-07:00
 -->
 
 <template>
   <div class='row top'>
     <div class='col-12 mainArea'>
-      <div class='row'>
+      <div class='row texture'>
         <div class='col-12 title'>
           <h2>{{ projects[activeIndex].name }}</h2>
         </div>
@@ -34,8 +34,12 @@
 </template>
 <script>
 import projectJSON from '../assets/projects.json'
+import bar from '@/components/bar'
 export default {
   props: ['activeIndex'],
+  components: {
+    bar
+  },
   data () {
     return {
       projects: projectJSON
@@ -56,6 +60,7 @@ export default {
 .mainArea {
   background-color: $color-primary-3;
   padding: 1em;
+  padding-top: 0;
   border: solid 2px $color-primary-4;
 }
 .image {
@@ -70,8 +75,10 @@ export default {
 .title {
   -webkit-text-stroke: 1px black;
   padding-bottom: 1em;
+  padding-top: 0.5em;
 }
 .imageScroll {
+  // padding-top: 1em;
   overflow-x: scroll;
 }
 .desc {
@@ -102,4 +109,9 @@ export default {
   border: solid 2px $color-primary-1;
   color: $color-primary-0;
 }
+// .texture {
+//   background-image: url('/static/texture.jpg');
+//   background-repeat: repeat;
+//   background-size: auto;
+// }
 </style>

@@ -3,21 +3,25 @@
 @Date:   2018-12-14T15:36:57-08:00
 @Email:  brogan.miner@oregonstate.edu
 @Last modified by:   Brogan
-@Last modified time: 2019-03-13T18:17:34-07:00
+@Last modified time: 2019-04-11T16:35:31-07:00
 -->
 
 <template>
   <div class="container-fluid home" id='main'>
     <div class='row' style='height: 100%'>
       <div class='mainPageDirectory col-lg-3'>
-        <div class='row'>
+        <div class='row texture top'>
+        </div>
+        <div class='row start'>
           <div class='mainPageNameText col-12'>
             <h2>Brogan Miner</h2>
           </div>
         </div>
-        <div class='row'>
-          <div class='mainPageTriangleOutline'>
-            <img class="mainPageTrianglePic">
+        <div class='row' >
+          <div class='spinner' ref='spinMe'>
+            <div class='mainPageTriangleOutline'>
+              <img class="mainPageTrianglePic">
+            </div>
           </div>
         </div>
         <div class='row linkRow'>
@@ -41,9 +45,11 @@
             </b-btn>
           </div>
         </div>
+        <div class='row texture bottom'>
+        </div>
       </div>
       <div class='col-lg-9'>
-        <bar />
+        <bar color='#05ffa1' />
         <div class='row projectTitleRow'>
           <div class='col-12 projectTitle'>
             <h1>Projects</h1>
@@ -81,6 +87,18 @@ export default {
     }
   },
   methods: {
+  },
+  mounted () {
+    let deg = 0
+    let spin = () => {
+      if (!this.$refs.spinMe.style) return
+      this.$refs.spinMe.style['-webkit-transform'] = 'rotateY(' + deg + 'deg)'
+      deg = deg + 15
+      setTimeout(() => { spin() }, 500)
+    }
+    this.$nextTick(() => {
+      spin()
+    })
   }
 }
 </script>
@@ -106,29 +124,77 @@ export default {
   margin: 0;
   -webkit-text-stroke: 1px black;
 }
+.spinner {
+  position: relative;
+  width: 300px;
+  left: calc(50% - 150px);
+  transition: transform 500ms linear;
+  transform-style: preserve-3d;
+}
 .mainPageTriangleOutline {
   position: relative;
+  top: -20px;
   left: calc(50% - 130px);
-  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  -webkit-clip-path: polygon(50% 100%, 0 10%, 100% 10%);
+  clip-path: polygon(50% 100%, 0 10%, 100% 10%);
   height: 260px;
   width: 260px;
   background-color: $color-primary-4;
+  transform-style: preserve-3d;
+}
+.spinner:after {
+  background-color: $color-primary-4;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  left: 83px;
+  top: 0;
+  width: 10px;
+  z-index: 0;
+  transform: rotateY(90deg) rotateX(30deg);
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+}
+// .spinner:before {
+//   background-color: $color-primary-4;
+//   bottom: 0;
+//   content: '';
+//   position: absolute;
+//   right: 83px;
+//   top: 0;
+//   width: 10px;
+//   z-index: 0;
+//   transform: rotateY(90deg) rotateX(150deg);
+//   transform-style: preserve-3d;
+//   transform-origin: 50% 50%;
+// }
+.mainPageTriangleOutline:before {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  // -webkit-clip-path: polygon(50% 100%, 0 10%, 100% 10%);
+  // clip-path: polygon(50% 100%, 0 10%, 100% 10%);
+  height: 260px;
+  width: 260px;
+  background-color: $color-primary-4;
+  transform: translateZ(25px);
+  content: '';
 }
 .mainPageTrianglePic {
   position: absolute;
-  top: 3px;
+  top: 3.4px;
   left: 5px;
   z-index: 200;
   width: calc(100% - 10px);
   height: 250px;
-  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  -webkit-clip-path: polygon(50% 100%, 0 10%, 100% 10%);
+  clip-path: polygon(50% 100%, 0 10%, 100% 10%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
   background-image: url('../../static/me.png');
+  transform-style: preserve-3d;
 }
 
 .mainPageDirectory {
@@ -174,5 +240,24 @@ h1 {
 
 .projectTitle {
   padding-left: 50px;
+}
+.texture {
+  height: 114.5px;
+  position: absolute;
+  width: 100%;
+  background-image: url('/static/texture.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+}
+.texture.top {
+  top: 0;
+  border-bottom: solid 2px $color-primary-4;
+}
+.texture.bottom {
+  bottom: 0;
+  border-top: solid 2px $color-primary-4;
+}
+.start {
+  padding-top: 114.5px;
 }
 </style>

@@ -3,13 +3,13 @@
 @Date:   2019-03-13T15:29:25-07:00
 @Email:  brogan.miner@oregonstate.edu
 @Last modified by:   Brogan
-@Last modified time: 2019-03-13T16:47:37-07:00
+@Last modified time: 2019-03-13T21:02:11-07:00
 -->
 
 <template>
   <div class='row'>
     <div class='col-12'>
-      <div v-for='i of Array(12)' :key='i' class='row bar' ref='bar'>
+      <div v-for='i of Array(12)' :key='i' class='row bar' :style='"background-color: " + color' ref='bar'>
         &nbsp;
       </div>
     </div>
@@ -17,6 +17,7 @@
 </template>
 <script>
 export default {
+  props: ['color'],
   mounted () {
     // maxHeight 200px
     // 20 elements

@@ -6,7 +6,7 @@
       "dashboard1.png",
       "dashboard2.png"
     ],
-    "description" : "The OSU Energy Dahsboard is a web application that focuses on providing real-time usage measurements of on campus buildings' utilities. The dashboard consists of a front-end made with Vue.js and a backend hosted on AWS running Node 10.7. This project was presented at the Washington Oregon Higher Education Sustainability Conference of 2019. The dashboard continues to serve the Oregon State University community as a means of tracking and measuring building energy usage.",
+    "description" : "The OSU Energy Dashboard is a web application that focuses on providing real-time usage measurements of on campus buildings' utilities. The dashboard consists of a front-end made with Vue.js and a backend hosted on AWS running Node 10.7. This project was presented at the Washington Oregon Higher Education Sustainability Conference of 2019. The dashboard continues to serve the Oregon State University community as a means of tracking and measuring building energy usage.",
     "links" : [
       {
         "text" : "GitHub",

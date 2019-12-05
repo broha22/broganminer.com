@@ -3,7 +3,7 @@
 @Date:   2018-12-14T15:36:57-08:00
 @Email:  brogan.miner@oregonstate.edu
 @Last modified by:   Brogan
-@Last modified time: 2019-03-13T17:00:35-07:00
+@Last modified time: 2019-04-11T14:06:10-07:00
 -->
 <template>
   <div id="app">
@@ -29,7 +29,12 @@ export default {
   }
 }
 </script>
-
+<style>
+  body {
+    -webkit-transform: perspective(500px);
+    -webkit-transform-style: preserve-3d;
+  }
+</style>
 <style scoped lang='scss'>
 @import './custom.scss';
 #app {
