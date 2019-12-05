@@ -18,11 +18,11 @@
           </div>
         </div>
         <div class='row' >
-          <div class='spinner' ref='spinMe'>
+          <!-- <div class='spinner' ref='spinMe'> -->
             <div class='mainPageTriangleOutline'>
               <img class="mainPageTrianglePic">
             </div>
-          </div>
+          <!-- </div> -->
         </div>
         <div class='row linkRow'>
           <div class='col-12'>
@@ -168,18 +168,18 @@ export default {
 //   transform-style: preserve-3d;
 //   transform-origin: 50% 50%;
 // }
-.mainPageTriangleOutline:before {
-  position: absolute;
-  left: 0;
-  z-index: 2;
-  // -webkit-clip-path: polygon(50% 100%, 0 10%, 100% 10%);
-  // clip-path: polygon(50% 100%, 0 10%, 100% 10%);
-  height: 260px;
-  width: 260px;
-  background-color: $color-primary-4;
-  transform: translateZ(25px);
-  content: '';
-}
+// .mainPageTriangleOutline:before {
+//   position: absolute;
+//   left: 0;
+//   z-index: 2;
+//   // -webkit-clip-path: polygon(50% 100%, 0 10%, 100% 10%);
+//   // clip-path: polygon(50% 100%, 0 10%, 100% 10%);
+//   height: 260px;
+//   width: 260px;
+//   background-color: $color-primary-4;
+//   transform: translateZ(25px);
+//   content: '';
+// }
 .mainPageTrianglePic {
   position: absolute;
   top: 3.4px;
