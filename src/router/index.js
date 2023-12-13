@@ -9,12 +9,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import main from '@/components/main'
-import about from '@/components/about'
-import pdfviewer from '@/components/pdfviewer.vue'
-import projects from '@/components/projects.vue'
+import workouts from '@/components/workouts'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    { path: '/', component: main },
+    { path: '/workouts', component: workouts }
   ]
 })

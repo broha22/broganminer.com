@@ -7,16 +7,14 @@
 -->
 <template>
   <div id="app">
-    <home />
+    <router-view />
   </div>
 </template>
 
 <script>
-import home from '@/components/main'
 export default {
   name: 'App',
   components: {
-    home
   },
   data () {
     return {
